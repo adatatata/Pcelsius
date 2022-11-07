@@ -1,22 +1,32 @@
+
 x = 0
 lista = []
+
+
 def main():
     PCelsius()
     global x
-    x+=1
+    x += 1
     Repetir()
+
+
 def PCelsius():
     [print('Temperatura Celsius:')]
     ºC = input(int)
-    lista.insert(0,ºC)
+    lista.insert(0, ºC)
     ºF = (9/5*float(ºC)+32)
     print('temperatura en ºC' + str(ºC) + ' = ºF ' + str(ºF))
+
+
 def Repetir():
-        contestacion = (input('Quieres hacer otra conversión?S/N :'))
-        if contestacion == 's':
-            main()
-        else :
-            print('Temperatura min en ºC: ' + min(lista))
-            print('Temperatura max en ºC: ' + max(lista))
-            print('Número de conversiones : ' + str(x))       
+    contestacion = (input('Quieres hacer otra conversión?S/N :'))
+    if contestacion == 's':
+        main()
+    else:
+        print('Temperatura min en ºC : ' + min(lista))
+        print('Temperatura max en ºC : ' + max(lista))
+        print('Número de conversiones : ' + str(x))
+
+
 main()
+
